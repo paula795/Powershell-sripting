@@ -1,14 +1,36 @@
-Add-Type -AssemblyName System.Windows.Forms
-Add-Type -AssemblyName System.Drawing
+Add-Type -AssemblyName System.Windows.Forms # Add-Type es el Cmdlet de PowerShell y sirve para cargar tipos de .NET en el entorno.
+                                            # -AssemblyName Indica qué librería .NET queremos cargar.
+                                            # System.Windows.Forms es el nombre del ensamblado o de la libreria. Contiene todo lo necesario para crear ventanas gráficas, botones, labels, textbox, etc.
+                                            #Esta línea lo que hace es cargar la libreria que nosotros indiquemos
+Add-Type -AssemblyName System.Drawing       # Add-Type es el Cmdlet de PowerShell y sirve para cargar tipos de .NET en el entorno.
+                                            # -AssemblyName Indica qué librería .NET queremos cargar.
+                                            # System.Draving es el tipo libreria que vamos a descargar que en este caso contiene clases de gráficos y sirve para manejar tamaños, colores, posiciones, imágenes, etc.
+                                            # Esta línea lo que hace es cargar la libreria que nosotros indiquemos
 
 # Create form
-$form = New-Object System.Windows.Forms.Form
-$form.Text = "Input Form"
-$form.Size = New-Object System.Drawing.Size(500,250)
-$form.StartPosition = "CenterScreen"
+$form = New-Object System.Windows.Forms.Form #$form es la variable que guardará el formulario.
+                                             #New-Object crea una instancia nueva o un nuevo objeto.
+                                             # System.Windows.Forms.Form es la clase que define todas las características que debe tener una ventana gráfica dentro de windows.
+                                             # Esta línea se encarga de crear la ventana principal donde estarán los cuadros de texto y botones. Es básicamente la "pantalla" del programa.
+$form.Text = "Input Form" #$form es la variable que contiene el formulario creado.
+                          #.Text es la propiedad del formulario que define el título que se va a observar en la barra superior.
+                          #"Input Form" es la cadena de texto que será el título que se va a mostrar.
+                          #Esta línea asigna el título que se mostrará en la parte superior del formular
+$form.Size = New-Object System.Drawing.Size(500,250) #$form es la variable que contienen al formulario.
+                                                     #.Size es la que se encarga de las propiedades que define las dimensiones del formulario.
+                                                     #New-Object se encarga de crear un nuevo objeto.
+                                                     #System.Drawing.Size es la clase que define un tamaño (ancho y alto).
+                                                     #(500,250) son los parámetros establecidos: 500 píxeles de ancho y 250 píxeles de alto.
+                                                     #Esta línea de código se encarga de establecer el tamaño del formulario en pantalla. 
+$form.StartPosition = "CenterScreen" #.StartPosition es propiedad que define la posición en la que va aparecer la ventana al abrirse.
+                                     #CenterScreen" es el valor que indica que debe abrirse en el centro de la pantalla.
+                                     #Esta línea indica que la ventana debe aparecer centrada cuando se abra. 
 
-############# Define labels
-$textLabel1 = New-Object System.Windows.Forms.Label
+############# Define labels label(información, texto fijo, etiqueta)
+$textLabel1 = New-Object System.Windows.Forms.Label  #$textLabel1 es la variable donde se almacenará la etiqueta.
+                                                     #New-Object → crea una nueva instancia.
+                                                     #System.Windows.Forms.Label es la herramienta que usa el programa para mostrar un texto fijo en la ventana.
+                                                     #Esta línea de código crea una etiqueta visual que será usada para mostrar el texto “Input 1” al usuario.
 $textLabel1.Text = "Input 1:"
 $textLabel1.Left = 20
 $textLabel1.Top = 20
