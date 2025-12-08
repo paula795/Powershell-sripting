@@ -25,14 +25,14 @@ sudo dpkg -i packages-microsoft-prod.deb #Este comando instala el archivo .deb q
                                          #Esto agrega el repositorio de Microsoft al sistema.
 
 # Delete the Microsoft repository keys file
-rm packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb #El comando rm se utiliza para eliminar archivos (remove), y en este caso se elimina el archivo packages-microsoft-prod.deb. quue fue lo que espcificamos en la linea de codigo.
 
 # Update the list of packages after we added packages.microsoft.com
-sudo apt-get update
+sudo apt-get update #El comando sudo apt-get update actualiza otra vez la lista de paquetes; sudo indica que se ejecuta con permisos de administrador, apt-get es el gestor de paquetes, y update actualiza los índices.
 
 ###################################
 # Install PowerShell
-sudo apt-get install -y powershell
+sudo apt-get install -y powershell #El comando sudo apt-get install -y powershell instala PowerShell; sudo usa permisos de administrador, apt-get install es para hacer la instlacion, -y acepta automáticamente, y powershell es el paquete que se va a instalar.
 
 # Start PowerShell
-pwsh
+pwsh #Este omando indica el inciio del PowerShell instalad de manera correcta.
