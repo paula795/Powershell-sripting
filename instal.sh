@@ -3,7 +3,7 @@
 
 # Update the list of packages
 sudo apt-get update #sudo se encarga de ejecutar el comando con permisos de administrador y si no estuviera, el sistema no te dejaría modificar paquetes.
-                    #apt-get se encarga de instalar, actualizar y eliminar paquetes.
+                    #apt-get se encarga de instalar, actualizar y eliminar paquetes, se le puede definir como administrador de paquetes.
                     #update Es una subcomando de apt-get y le dice que actualice la lista de paquetes disponibles desde los repositorios.
 
 # Install pre-requisite packages.
