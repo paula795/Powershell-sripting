@@ -1,10 +1,10 @@
 function Start-ProgressBar { # Esta línea lo que crea es una función llamada Start-ProgressBar (Se incia la función)
                              # La palabra function es la Palabra clave que define una función en PowerShell.
                              # Start-ProgressBar es el Nombre de la función que escogimos.
-    [CmdletBinding()] #      # [CmdletBinding()] convierte la función en una función avanzada, otorgándole capacidades similares a los cmdlets de PowerShell escritos en C#.
+    [CmdletBinding()] #      # [CmdletBinding()] convierte la función en una función avanzada, otorgándole capacidades similares a los cmdlets.
     param (   # param es el que indica que viene una lista de parámetros de entrada.
               # Se encarga de abrir la definición de parámetros que la función recibirá (Abre la lista).
-        [Parameter(Mandatory = $true)] #El comando [Parameter(...)] se utiliza para definir cómo debe comportarse un parámetro dentro de una función en PowerShell. # 
+        [Parameter(Mandatory = $true)] #El comando [Parameter()] se utiliza para definir que debe hacer un parámetro.
                                        #La opción Mandatory = $true indica que el parámetro es obligatorio y que el usuario debe proporcionarlo.
         $Title,                        #$Title representa el “título” del progress bar, es decir, el texto que aparece en la parte superior de la barra de progreso mientras la función está en ejecución.
         
